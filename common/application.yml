@@ -12,11 +12,13 @@ eureka:
     register-with-eureka: true
   instance:
     prefer-ip-address: true
+    
 management: # Enable actuator endpoints
   endpoints:
     web:
       exposure:
         include: health,info,prometheus,metrics,refresh # Expose common endpoints
+        
 # Default JWT secret - Override in specific service configs or use Vault
 jwt:
   secret: "DEFAULT_VERY_SECRET_KEY_REPLACE_IN_PROD_OR_VAULT"
