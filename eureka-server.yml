@@ -1,10 +1,6 @@
 server:
   port: 8761 # Default port for Eureka Server
 
-spring:
-  application:
-    name: eureka-server
-
 eureka:
   client:
     register-with-eureka: false  # The registry itself doesn't need to register
