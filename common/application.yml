@@ -1,4 +1,9 @@
 # Default settings shared across services
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888  # Config Server URL for all apps
+      
 eureka:
   client:
     serviceUrl:
