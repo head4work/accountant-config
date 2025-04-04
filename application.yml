@@ -16,5 +16,5 @@ management: # Enable actuator endpoints
         
 # Default JWT secret - Override in specific service configs or use Vault
 jwt:
-  secret: "DEFAULT_VERY_SECRET_KEY_REPLACE_IN_PROD_OR_VAULT"
+  secret: ${JWT_SECRET:DEFAULT_VERY_SECRET_KEY_REPLACE_IN_PROD_OR_VAULT} # Env var override
   expiration-ms: 3600000 # 1 hour
