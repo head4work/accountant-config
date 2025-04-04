@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # Enables Eureka-based service discovery
+          lower-case-service-id: true # Matches service IDs in lowercase
+      routes:
+        - id: pet-service
+          uri: lb://pet-service # Load-balanced URI via Eureka
+          predicates:
+            - Path=/pets/**
+          filters:
+            - StripPrefix=1 # Removes "/pets" from the forwarded path
