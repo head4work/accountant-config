@@ -12,7 +12,7 @@ spring:
         - id: pet-service
           uri: lb://pet-service # Load-balanced URI via Eureka
           predicates:
-            - Path=/pets/**
+            - Path=/service/v1/pets/**
          # filters:
          #   - RewritePath=/pets/(?<segment>.*), /service/v1/pets/$\{segment}
         #  filters:
