@@ -13,5 +13,7 @@ spring:
           uri: lb://pet-service # Load-balanced URI via Eureka
           predicates:
             - Path=/pets/**
+          filters:
+            - RewritePath=/pets/(?<segment>.*), /service/v1/pets/$\{segment}
         #  filters:
          #   - StripPrefix=1 # Removes "/pets" from the forwarded path
