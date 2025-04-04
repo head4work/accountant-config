@@ -13,5 +13,5 @@ spring:
           uri: lb://pet-service # Load-balanced URI via Eureka
           predicates:
             - Path=/pets/**
-          filters:
-            - StripPrefix=1 # Removes "/pets" from the forwarded path
+        #  filters:
+         #   - StripPrefix=1 # Removes "/pets" from the forwarded path
