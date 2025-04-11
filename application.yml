@@ -14,7 +14,3 @@ management: # Enable actuator endpoints
       exposure:
         include: health,info,prometheus,metrics,refresh # Expose common endpoints
         
-# Default JWT secret - Override in specific service configs or use Vault
-jwt:
-  secret: ${JWT_SECRET:DEFAULT_VERY_SECRET_KEY_REPLACE_IN_PROD_OR_VAULT} # Env var override
-  expiration-ms: 3600000 # 1 hour
