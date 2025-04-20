@@ -1,2 +1,15 @@
 server:
   port: 8083
+  application:
+  jpa:
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+      hibernate:
+        format_sql: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    url: jdbc:postgresql://localhost:5432/employee-service
+    username: postgres
+    password: postgres
