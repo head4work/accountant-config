@@ -29,3 +29,8 @@ spring:
           uri: lb://employee-service
           predicates:
             - Path=/service/v1/employees/**
+            
+        - id: payroll-service
+          uri: lb://payroll-service
+          predicates:
+            - Path=/service/v1/payroll/**
