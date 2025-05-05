@@ -18,13 +18,13 @@ spring:
 resilience4j:
   circuitbreaker:
     instances:
-      employeeService:
+      employee-service:
         register-health-indicator: true
         sliding-window-size: 5
         failure-rate-threshold: 50
         wait-duration-in-open-state: 10s
   retry:
     instances:
-      employeeService:
+      employee-service:
         max-attempts: 3
         wait-duration: 500ms
