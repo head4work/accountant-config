@@ -16,7 +16,7 @@ management: # Enable actuator endpoints
   tracing:
     sampling:
       probability: 1.0  # 100% of requests traced — adjust as needed
-   zipkin:
+  zipkin:
     tracing:
       endpoint: http://localhost:9411/api/v2/spans
         
