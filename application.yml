@@ -1,4 +1,12 @@
 # Default settings shared across services      
+spring:
+  zipkin:
+    base-url: http://localhost:9411
+    enabled: true
+  sleuth:
+    sampler:
+      probability: 1.0 # 100% of requests are traced (default is 0.1)
+      
 eureka:
    client:
      serviceUrl:
