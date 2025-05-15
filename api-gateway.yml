@@ -17,10 +17,10 @@ spring:
           enabled: true # Enables Eureka-based service discovery
           lower-case-service-id: true # Matches service IDs in lowercase
       routes:
-        - id: pet-service
-          uri: lb://pet-service # Load-balanced URI via Eureka
+        - id: file-service
+          uri: lb://file-service # Load-balanced URI via Eureka
           predicates:
-            - Path=/service/v1/pets/**
+            - Path=/service/v1/files/**
          # filters:
          #   - RewritePath=/pets/(?<segment>.*), /service/v1/pets/$\{segment}
         #  filters:
