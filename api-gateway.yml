@@ -35,12 +35,12 @@ spring:
           predicates:
             - Path=/service/v1/employees/**
             
-        - id: company-service
-          uri: lb://company-service
+        - id: payroll-service
+          uri: lb://payroll-service
           predicates:
-            - Path=/service/v1/company/**
+            - Path=/service/v1/payroll/**
 
         - id: company-service
           uri: lb://company-service
           predicates:
-            - Path=/service/v1/payroll/**
+            - Path=/service/v1/company/**
