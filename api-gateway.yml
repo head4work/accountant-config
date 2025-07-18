@@ -58,3 +58,8 @@ spring:
           uri: lb://company-service
           predicates:
             - Path=/service/v1/company/**
+
+        - id: timecards-service
+          uri: lb://timecards-service
+          predicates:
+            - Path=/service/v1/timecards/**
