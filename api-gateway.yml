@@ -62,4 +62,4 @@ spring:
         - id: timecards-service
           uri: lb://timecards-service
           predicates:
-            - Path=/service/v1/timecards/**
+            - Path=/service/v1/timecards/**, /service/v1/device/**
